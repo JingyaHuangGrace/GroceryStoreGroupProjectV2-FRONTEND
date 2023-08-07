@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Contact } from '../models/contact.model';
 
-const baseUrl = 'http://localhost:8079/api/contacts';
+//const baseUrl = 'http://localhost:8079/api/contacts';
+const baseUrl = 'https://team-unite-grocerystoren.onrender.com/api/contacts';
 
 @Injectable({
   providedIn: 'root'

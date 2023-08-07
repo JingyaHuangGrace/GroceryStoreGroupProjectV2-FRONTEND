@@ -4,7 +4,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-const AUTH_API = 'http://localhost:8079/api/auth/';
+//const AUTH_API = 'http://localhost:8079/api/auth/';
+const AUTH_API = 'https://team-unite-grocerystoren.onrender.com/api/auth/';
 
 const httpOptions = {
 
