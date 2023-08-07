@@ -9,7 +9,11 @@ const AUTH_API = 'https://team-unite-grocerystoren.onrender.com/api/auth/';
 
 const httpOptions = {
 
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+  })
 
 };
 
