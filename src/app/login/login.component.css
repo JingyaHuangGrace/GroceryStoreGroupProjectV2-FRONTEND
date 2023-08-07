@@ -1,0 +1,14 @@
+.col-md-12 {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
+    height: 100vh; /* Optionally, set the height of the row to the full viewport height */
+  }
+.login-form {
+    max-width: 400px;
+    margin: auto;
+  }
+.profile-img-card {
+    width: 220px; 
+    height: auto; 
+  }

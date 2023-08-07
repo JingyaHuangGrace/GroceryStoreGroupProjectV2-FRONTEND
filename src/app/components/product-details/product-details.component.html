@@ -1,0 +1,93 @@
+<div *ngIf="!showModeratorBoard && !showAdminBoard; else editable">
+  <main class="container" *ngIf="currentProduct.id">
+
+    <div class="row">
+
+      <div class="col-md-7" position="relative">
+        <img src='{{ "assets/img/" + currentProduct.pic_name }}' 
+        width="90%" height="auto" />
+      </div>
+
+      <div class="col-md-5">
+        <div class="product-description">
+          <span>{{currentProduct.category}}</span>
+          <p class="border"></p>
+          <h5>{{currentProduct.name}}</h5>
+          <p>{{currentProduct.description}}</p>
+          <p class="border"></p>
+
+        </div>
+
+        <div class="product-price">
+          <span>CAD $ {{currentProduct.price}}</span>
+          <a href="#" class="cart-btn">Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <p class="border"></p>
+      <div>
+        <label><strong>Weight:</strong></label>
+        {{ currentProduct.weight }}
+      </div>
+
+      <div>
+        <label><strong>Nutrition fact:</strong></label>
+        {{ currentProduct.nutrition_fact }}
+      </div>
+    </div>
+  </main>
+</div>
+<ng-template #editable>
+  <div *ngIf="currentProduct.id" class="edit-form">
+    <h4>Grocery</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="currentProduct.name" name="name" />
+      </div>
+      <div class="form-group">
+        <label for="pic_name">Picture Name</label>
+        <input type="text" class="form-control" id="pic_name" [(ngModel)]="currentProduct.pic_name" name="pic_name" />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" [(ngModel)]="currentProduct.description"
+          name="description" />
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" id="price" [(ngModel)]="currentProduct.price" name="price" />
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="text" class="form-control" id="quantity" [(ngModel)]="currentProduct.quantity" name="quantity" />
+      </div>
+      <div class="form-group">
+        <label for="weight">Weight</label>
+        <input type="text" class="form-control" id="weight" [(ngModel)]="currentProduct.weight" name="weight" />
+      </div>
+      <div class="form-group">
+        <label for="nutritionFact">Nutrition fact</label>
+        <input type="text" class="form-control" id="nutrition_fact" [(ngModel)]="currentProduct.nutrition_fact"
+          name="nutrition_fact" />
+      </div>
+    </form>
+    <button class="badge badge-danger mr-2" (click)="deleteProduct()">
+      Delete
+    </button>
+
+    <button type="submit" class="badge badge-success mb-2" (click)="updateProduct()">
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentProduct.id">
+    <br />
+    <p>Cannot access this Product...</p>
+  </div>
+</ng-template>
+
+

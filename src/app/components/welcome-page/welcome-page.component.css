@@ -1,0 +1,9 @@
+:host{
+    background-image: url("/assets/img/banner-welcome.png");
+    background-position: 0px 0px;  
+    background-size: 100%;
+    background-repeat: repeat;
+    position: absolute;
+  
+    width: 100vw;
+  }

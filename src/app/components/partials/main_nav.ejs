@@ -1,0 +1,33 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <ul class="nav navbar-nav">
+
+  <li><a href="index"><img src="/img/logo.png"></a></li>
+   <% if (title=="Home") { %>
+        <li class="active">
+          <% } else { %>
+            <li class="nav-item">
+              <% } %><a href="index">Home</a></li>
+
+  <% if (title=="About Me") { %>
+        <li class="active">
+          <% } else { %>
+            <li class="nav-item">
+              <% } %><a href="about_me">About Me</a></li>
+  <% if (title=="Projects"||title=="Project Java" || title=="Project CSharp" || title=="Project Design")   { %>
+        <li class="active">
+          <% } else { %>
+            <li class="nav-item">
+              <% } %><a href="projects">Projects</a></li>
+  <% if (title=="Services") { %>
+        <li class="active">
+          <% } else { %>
+            <li class="nav-item">
+              <% } %><a href="services">Services</a></li>
+  <% if (title=="Contact") { %>
+        <li class="active">
+          <% } else { %>
+            <li class="nav-item">
+              <% } %><a href="contact">Contact</a></li>
+  </ul>
+</nav>
+

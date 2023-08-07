@@ -1,0 +1,126 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.input-group {
+  width: 65%;
+  margin-top: 6%;
+}
+.container{
+  margin-top: 5% ;
+  margin-bottom: 5%;
+
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.img {
+  margin-top: 5%;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.banner-vertical{
+margin-top: 7%;
+
+}
+.card_btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  position:relative;
+}
+
+.btn-outline-secondary{
+  padding: 0.4rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-weight: 400;
+  display: block;
+  width: 30%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  position:relative;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+  
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 100;
+}
+
+.cards_item {
+  
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 2px 2px rgb(250, 248, 248);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  height: 100%;
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+}
+
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 2;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}

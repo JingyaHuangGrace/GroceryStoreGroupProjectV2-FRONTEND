@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="name" />
+      </div>
+      <div class="input-group-append">
+        <button class="btn-outline-secondary" type="button" (click)="searchName()">
+          Search
+        </button>
+      </div>
+
+    </div>
+
+    <div class="col-md-8">
+
+      <div class="row_sub">
+
+        <div class="cards_item">
+          <div class="card2">
+            <img src='assets/img/banner-sub-product1.png'/>
+          </div>
+        </div>
+
+        <div class="cards_item">
+          <div class="card2">
+            <img src='assets/img/banner-sub-product2.png' />
+          </div>
+        </div>
+
+        <div class="cards_item">
+          <div class="card2">
+            <img src='assets/img/banner-sub-product3.png' />
+          </div>
+        </div>
+
+      </div>
+
+      
+
+        <ul class="cards">
+          <li class="cards_item" *ngFor="let product of products; let i = index">
+            <div class="card">
+              <div class="card_image"><img src='{{ "assets/img/" + product.pic_name }}' />
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">{{ product.name }}</h2>
+                <p class="card_text">CAD $ {{ product.price}}</p>
+                <button *ngIf="!showModeratorBoard && !showAdminBoard" class="btn card_btn"
+                  [class.active]="i == currentIndex" (click)="setActiveProduct(product, i)">
+                  Read More</button>
+                <button *ngIf="showModeratorBoard || showAdminBoard" class="btn card_btn"
+                  [class.active]="i == currentIndex" (click)="setActiveProduct(product, i)">
+                  Edit</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      
+    </div>
+  </div>
+</div>
